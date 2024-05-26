@@ -1,0 +1,60 @@
+:root{
+    --header-700: #144754;
+  --backgraoud-700: ##007677;
+  --dark-700: #171D23;
+  --green-700: #35A682;
+  --icons-700: #8ED37A;
+  --yellow-700:#F9F871;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+@keyframes upToDown {
+    0% {
+      transform: translateY(-10px);
+    }
+   
+    100% {
+        transform: translateY(100vh);
+      }
+  }
+
+  
+  .element {
+    width: 150px;
+    height: 150px;
+    animation: upToDown 10s infinite;
+  }
+  
+  .game-header{
+    height: 70px;
+    background-color: var(--header-700);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .head-item1 , .head-item2{
+    margin: 25px;
+  }
+  
+  .head-item2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+ .head-item1{
+    width: 150px;
+    height: 40px;
+    background-color: var(--icons-700);
+   border-radius: 8px;
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
+ }
