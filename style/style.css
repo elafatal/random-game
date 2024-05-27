@@ -11,6 +11,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+  
   }
 /* 
 @keyframes upToDown {
@@ -27,24 +28,26 @@
     position: relative;
     height: 100vh;
     overflow: auto;
-    animation: fall 5s infinite;
+    animation: fall 15s infinite;
   }
   
   .shapes {
     position: absolute;
     width: 100px;
     height: 100px;
-    animation: fall 5s infinite;
+    animation: fall 15s infinite;
   }
   
   @keyframes fall {
-    0% { transform: translateY(-10px); }
+    0% { transform: translateY(70px); }
     100% { transform: translateY(100vh); }
   }
   *{
      overflow: hidden;
   }
-  
+  main{
+    background-color: var(--dark-700);
+  }
   .element {
     width: 150px;
     height: 150px;

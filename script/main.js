@@ -11,7 +11,7 @@ const hard= document.getElementById("hard");
 function init(){
   let shapes = [];
 
-  let s=0;
+  
   
   let w = document.getElementById('falling-point').offsetWidth;
   let h = window.innerHeight;
@@ -33,26 +33,39 @@ function init(){
      img.setAttribute('class', 'shapes');
      img.style.left = randomInRange(0, w)+'px';
      img.style.top = 0+'px';
-     console.log(pic);
      switch (pic) {
          case 1:
           img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgnaRRVNchPtdFQ5Jhp4Sw16X4Zc-tHECLKoLbcbhMjt0dxaZycP0xYlPyCOgWwiVCMJE&usqp=CAU';
-          s=5;
+          img.setAttribute('id','5');
           break;
          case 2:
           img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwqzieMzGpeQAZcrJ-nALnrXpu9ao_DDKkA5HqQe11IkKNjKFuNKmBajTtGOKhEG2BGFU&usqp=CAU';
-          s=7;
+          img.setAttribute('id','7');
            break;
          case 3:
           img.src = 'https://dkstatics-public.digikala.com/digikala-products/fe68b8df826884dc8fcf23a01571a175ed04cd0f_1633337107.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90';
-          s=10;
+          img.setAttribute('id','10');
           break;
        }
        img.style.borderRadius='50%'
   
      document.getElementById('main').appendChild(img);
      shapes.push(img);
+     console.log(score);
+
+     img.addEventListener('click', function(event) {
+      if(img.id=='5'){
+        score=score+5;
+      }else if(img.id=='7'){
+        score=score+7;
+      }else if(img.id=='10'){
+        score=score+10;
+      }
+      this.remove();
+    });
    }
+
+
   
    function hideInputs() {
     easy.style.display = 'none';
