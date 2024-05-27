@@ -12,7 +12,7 @@
     padding: 0px;
     box-sizing: border-box;
   }
-
+/* 
 @keyframes upToDown {
     0% {
       transform: translateY(-10px);
@@ -21,8 +21,29 @@
     100% {
         transform: translateY(100vh);
       }
-  }
+  } */
 
+  #falling-point {
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+    animation: fall 5s infinite;
+  }
+  
+  .shapes {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: fall 5s infinite;
+  }
+  
+  @keyframes fall {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(100vh); }
+  }
+  *{
+     overflow: hidden;
+  }
   
   .element {
     width: 150px;
@@ -57,4 +78,8 @@
    display: flex; 
    justify-content: center; 
    align-items: center; 
+ }
+
+ .main{
+  height: 80vh;
  }
