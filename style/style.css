@@ -13,30 +13,22 @@
     box-sizing: border-box;
   
   }
-/* 
-@keyframes upToDown {
-    0% {
-      transform: translateY(-10px);
-    }
-   
-    100% {
-        transform: translateY(100vh);
-      }
-  } */
 
   #falling-point {
     position: relative;
     height: 100vh;
     overflow: auto;
-    animation: fall 15s infinite;
+    animation: fall 7s infinite;
   }
   
   .shapes {
     position: absolute;
     width: 100px;
     height: 100px;
-    animation: fall 15s infinite;
+    animation-duration: var(--animation-duration, 5s);
+    animation: fall 10s infinite;
   }
+  
   
   @keyframes fall {
     0% { transform: translateY(70px); }
@@ -85,4 +77,16 @@
 
  .main{
   height: 80vh;
+ }
+
+ .f{
+  height: 400px;
+  background-color: var(--header-700);
+  overflow: hidden;
+ }
+
+ .info{
+  width: 300px;
+  text-align: center;
+  color: var(--icons-700);
  }
