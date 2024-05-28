@@ -27,8 +27,9 @@ function init(){
   }  
 
   function createShape() {
-
-    if (gameStarted == true) {
+    let imgCount = document.getElementsByTagName('img').length;
+    console.log(imgCount);
+    if (gameStarted == true && imgCount<=7) {
       let img = document.createElement('img');
     const pic=getRandomNumber();
      img.setAttribute('class', 'shapes');
@@ -75,13 +76,19 @@ function init(){
       }
       scoretag.innerText=`Score : ${score}`;
       this.remove();
+      imgCount--;
     });
 
     again.addEventListener('click', function() {
+      for (let index = 0; index < imgCount; index++) {
+        img.remove();
+        
+      }
       img.style.display='none';
       score=0;
       scoretag.innerText=`Score : ${score}`;
       gameStarted=false;
+      // imgCount=1;
       easy.style.display = 'flex';
       average.style.display = 'flex';
       hard.style.display = 'flex';
